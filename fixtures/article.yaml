@@ -1,0 +1,8 @@
+# fixtures/article.yml
+App\Entity\Article:
+  article_{1..10}:
+    name: <name()>
+    description: <text()>
+    createdAt: <dateTimeBetween('-50 years', '-10 years')>
+    #    user: '@user_<current()>'
+    user: '@user_*'

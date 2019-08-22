@@ -1,0 +1,12 @@
+# fixtures/user.yml
+App\Entity\User:
+  user_1:
+    email: 'admin@admin.com'
+    roles: ['ROLE_ADMIN', 'ROLE_USER']
+    api_key: 'admin'
+  user_{2..10}:
+    firstname: <firstName()>
+    lastname: <lastName()>
+    email: <email()>
+    birthday: <dateTimeBetween('-100 years', '-10 years')>
+    api_key: <uniqid()>
